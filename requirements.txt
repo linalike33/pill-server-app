@@ -2,3 +2,4 @@ Flask
 ultralytics
 requests
 werkzeug
+flask-cors
