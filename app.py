@@ -90,5 +90,5 @@ def reset_status():
     return jsonify({"status": "reset_success"}), 200
 
 if __name__ == '__main__':
-    # 0.0.0.0으로 열어야 같은 와이파이의 스마트폰(프론트)과 ESP32가 접속 가능합니다.
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
